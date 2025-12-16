@@ -61,10 +61,10 @@ Map 2 (LED bleue)
 Le changement de map se fait via la touche 0.
 
 ## Matériel utilisé
-Vous trouverez une section dédiée au matériel utilisé dans le dossier "Composent"
-Microcontrôleur : KB2040
-Firmware : CircuitPython
-PCB custom
+Vous trouverez une section dédiée au matériel utilisé dans le dossier "Composent"<br>
+Microcontrôleur : KB2040<br>
+Firmware : [CircuitPython pour KB2040](https://circuitpython.org/board/adafruit_kb2040/)<br>
+PCB custom<br>
 Boîtier imprimé en 3D
 
 ## 📸 Photos
@@ -73,7 +73,7 @@ Boîtier imprimé en 3D
 
 
 ##  Installation
-Installer CircuitPython sur la KB2040<br>
+Installer [CircuitPython sur la carte KB2040](https://circuitpython.org/board/adafruit_kb2040/)<br>
 Copier les fichiers du dossier firmware/ sur la carte CIRCUITPY<br>
 Adapter les chemins Windows dans maps.py<br>
 

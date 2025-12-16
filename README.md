@@ -1,4 +1,5 @@
 # Custom-Macropad-KB2040-3x3
+![IMG_20251214_225748V2](https://github.com/user-attachments/assets/79548706-77de-43b8-ac35-a215ec06e960)
 Macropad personnalisé avec 9 touches, encodeur rotatif cliquable et bouton power dédié. Boîtier imprimé en 3D, carte électronique maison et firmware CircuitPython.
 
 ## Custom Macropad – KB2040 (CircuitPython)<br>
@@ -68,8 +69,9 @@ PCB custom<br>
 Boîtier imprimé en 3D
 
 ## 📸 Photos
-![IMG_20251214_225748V2](https://github.com/user-attachments/assets/79548706-77de-43b8-ac35-a215ec06e960)
+![IMG_20251214_225748V2](https://github.com/user-attachments/assets/b91737a8-a96f-4391-8eea-442f346fa38b)
 <img width="2559" height="1372" alt="EsayEDA Switch upside down2" src="https://github.com/user-attachments/assets/773cb989-1b69-44d5-a925-a56af4a77c45" />
+![IMG_20251214_225913](https://github.com/user-attachments/assets/07436db6-6bd8-4548-8c6b-be316a7dbcf5)
 
 
 ##  Installation

@@ -48,7 +48,7 @@ Les macros clavier
 Les fonctions globales (verrouillage, extinction, etc.)
 
 
-##  Gestion des maps
+###  Gestion des maps
 Map 1 (LED rouge)
 - Déverrouillage du PC
 - Lancement d’applications

@@ -12,57 +12,59 @@ Ce projet est un macropad entièrement personnalisé, conçu et réalisé de A �
 
 Premier projet personnel, réalisé sur environ 3 mois, avec pour objectif d’apprendre l’électronique, la conception 3D et le développement embarqué.
 
-## PCB / Carte éléctronique + 3D carte<br>
+## PCB / Carte éléctronique + 3D de la carte<br>
 Les fichiers pour la carte électronique et les fichiers 3D des PCB se trouve dans le dossier "Carte électronique".
-Vous-y trouverai deux versions
+Vous-y trouverai deux versions : 
 - Gerber_EsayEDA Switch upside down
 Cette version est ma première itération de carte électronique. Elle est 100 % fonctionnel pour ma part, je l'ai testé et c'est celle de mon macropad actuel. Elle a un léger défaut : les switchs de clavier, on été placé dans la mauvaise orientation (ils ont été tournés de 180°, mais cela ne gêne en rien son fonctionnement.)  
 - Gerber_EsayEDA Switch good not tested
 Cette deuxième version corrige l'erreur du premier marcopad, les switchs sont dans le bon sens. Toutefois, je n'ai pas testé cette nouvelle version en vrai. Sur le papier et d'après le logiciel tout est bon.
 
 ## Fonctionnalités
-- Clavier matriciel 3×3 (9 touches)
 - Encodeur rotatif cliquable
-  - Rotation : volume système
-  - Clic : lecture / pause
+  - Rotation : volume système + ou -
+  - Clic : lecture / pause des fichiers audio, vidéo Youtube, ...
 - Bouton Power dédié
   - Arrêt immédiat du PC
--  2 maps configurables
-  - Changement de map via la touche 0
-  - LED RGB intégrée pour indiquer la map active
-- Émulation clavier USB (HID)
-- Code modulaire (actions séparées du main)
+- Clavier matriciel 3×3 (8 touches programmable par map)
+  -  2 maps configurables (voir plus si vous shouaiter en ajouter)
+    - Changement de map via la touche 0 (haut a gauche)
+    - La LED RGB intégrée a l'ESP indique la map active
+      - (exmple : couleur bleu --> map 1 = 8 touches configurable, chanement de map avec touche 0, couleur rouge --> map 2 = 8 nouvelle touche configurable ...)
+
+###  Gestion des maps
+Tout ses maps sont entièrement configurable et c'est à vous de les adapter à vos besoins. <br>
+Pour ma part j'ai construit les maps de la manière suivante : 
+Map 1 (LED rouge)
+- Déverrouillage du PC
+- Écriture de chiffre
+- Lancement d’applications (Exemple avec Discord, Youtube via le navigateur, Spotify)
+- Veille prolonger de l'ordinateur.
+- Verrouillage (Win + L)
+
+Map 2 (LED bleue)
+- Écriture de chiffre
+
+Le changement de map se fait via la touche 0 (première touche en haut à gauche).
 
 ## Architecture logicielle
 <code>code.py</code><br>
 Gère :
 Lecture des entrées (touches, encodeur, bouton power)
-Changement de map
+Le changement de map
 Volume et media control
 Appels aux actions
 
 <code>maps.py</code><br>
 Contient :
-Les actions de chaque touche
-Les commandes système (via Win + R)
-Les macros clavier
-Les fonctions globales (verrouillage, extinction, etc.)
+Les actions de chaque touche et de chaque map
+- Les commandes système (via Win + R)
+- Les macros clavier
+- Les fonctions globales (verrouillage, overture d'application, etc.)
 
-
-###  Gestion des maps
-Map 1 (LED rouge)
-- Déverrouillage du PC
-- Lancement d’applications
-- Contrôle multimédia
-- Verrouillage / veille
-
-Map 2 (LED bleue)
-- Actions alternatives (exemple : saisie de codes)
-
-Le changement de map se fait via la touche 0.
 
 ## Matériel utilisé
-Vous trouverez une section dédiée au matériel utilisé dans le dossier "Composent"<br>
+**Vous trouverez une section dédiée au matériel utilisé dans le dossier "Composent"**<br>
 Microcontrôleur : KB2040<br>
 Firmware : [CircuitPython pour KB2040](https://circuitpython.org/board/adafruit_kb2040/)<br>
 PCB custom<br>
@@ -75,9 +77,9 @@ Boîtier imprimé en 3D
 
 
 ##  Installation
-Installer [CircuitPython sur la carte KB2040](https://circuitpython.org/board/adafruit_kb2040/)<br>
-Copier les fichiers du dossier firmware/ sur la carte CIRCUITPY<br>
-Adapter les chemins Windows dans maps.py<br>
+- Installer [CircuitPython sur la carte KB2040](https://circuitpython.org/board/adafruit_kb2040/)<br>
+- Copier les fichiers du dossier firmware/ sur la carte CIRCUITPY <br>
+- Adapter les chemins Windows et les actions que vous shouaiter effectuer dans <code>maps.py</code><br>
 
 ## Defaut et possible amélioration
 > [!WARNING]
